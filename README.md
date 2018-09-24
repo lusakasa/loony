@@ -1,4 +1,4 @@
-# Loony
+# Loony  &middot; [![License](https://img.shields.io/github/license/lusakasa/loony.svg)](https://github.com/lusakasa/loony/blob/master/LICENSE) [![npm](https://img.shields.io/npm/v/loony.svg)](https://www.npmjs.com/package/loony)
 
 Loony is a proof-of-concept library for building Javascript DSLs.
 
