@@ -1,6 +1,6 @@
-# JSDSL
+# Loony
 
-JSDSL is a proof-of-concept library for building Javascript DSLs.
+Loony is a proof-of-concept library for building Javascript DSLs.
 
 First you define your language using [nearely](https://github.com/kach/nearley). Then you write *programs* with method chaining and recursive tagged template calls. 
 
@@ -8,10 +8,10 @@ Compiled programs either produce an output or throw an error if you've written a
 
 ## Example
 
-The following is an example of a SQL DSL built with JDSL.
+The following is an example of a SQL DSL built with Loony.
 
 ```js
-const sql = require('jsdsl')( ... )
+const sql = require('loony')( ... )
 
 sql.select`title``genre`.from`book`.where`id = 7`.query
 // "select title, genre from book where id = 7"
@@ -35,7 +35,7 @@ sql.select`title`.from`book``author`.where`id = 7`.query
 `sql` was defined as:
 
 ```js
-const sql = require('jsdsl')({
+const sql = require('loony')({
   // grammar generatd with nearely: https://github.com/kach/nearley
   grammar: require('./sql.js'),
   // language keywords
@@ -94,7 +94,7 @@ set    -> %set %t:+                   {% d => ' set ' + d[1].join(', ') %}
 
 ## Future
 
-JSDSL is a proof of concept. There are many ways it can be improved. Feel free to submit PRs.
+loony is a proof of concept. There are many ways it can be improved. Feel free to submit PRs.
 
 ## License
 
