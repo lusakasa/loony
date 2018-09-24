@@ -11,16 +11,23 @@ Compiled programs either produce an output or throw an error if you've written a
 The following is an example of a SQL DSL built with JDSL.
 
 ```js
+const sql = require('jsdsl')( ... )
+
 sql.select`title``genre`.from`book`.where`id = 7`.query
 // "select title, genre from book where id = 7"
+
 sql.delete.from`book`.where`genre = 'Fiction'`.query
 // "delete  from book where genre = 'Fiction'"
+
 sql.insert.into`book`.values`title = '1984'`.query
 // "insert into book values title = '1984'"
+
 sql.update`book`.set`title = '1984'`.query
 // "update book set title = '1984'"
+
 sql.select.from`title``genre`.from`book`.where`id = 7`.query
 // throws error blaming .from
+
 sql.select`title`.from`book``author`.where`id = 7`.query
 // throws error blaming `author`
 ```
