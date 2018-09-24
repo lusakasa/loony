@@ -2,7 +2,7 @@
 
 Loony is a proof-of-concept library for building Javascript DSLs.
 
-First you define your language using [nearely](https://github.com/kach/nearley). Then you write *programs* with method chaining and recursive tagged template calls. 
+First you define your language using [nearley](https://github.com/kach/nearley). Then you write *programs* with method chaining and recursive tagged template calls. 
 
 Compiled programs either produce an output or throw an error if you've written an invalid program.
 
@@ -62,7 +62,7 @@ const sql = require('loony')({
 })
 ```
 
-`sql.js` was generated from  the [nearely](https://github.com/kach/nearley) grammar file `sql.ne`:
+`sql.js` was generated from  the [nearley](https://github.com/kach/nearley) grammar file `sql.ne`:
 
 ```ne
 @{%
